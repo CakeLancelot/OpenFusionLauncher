@@ -48,7 +48,7 @@ jobs:
     needs: build-ffrunner
     # This runner image should stay the same, otherwise there is potential to break compatibility.
     # See https://v2.tauri.app/distribute/appimage/#limitations
-    runs-on: ubuntu-22.04 
+    runs-on: ubuntu-22.04-arm
     env:
       FFRUNNER_VERSION: ${{ needs.build-ffrunner.outputs.version }}
       TAURI_BUNDLER_NEW_APPIMAGE_FORMAT: true
